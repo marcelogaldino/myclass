@@ -52,3 +52,74 @@ body {
     width: 100%;
     transition: width 200ms ease-in-out 0.2s;
 }
+
+/* ### CARD ### */
+
+.card {
+    width: 800px;
+    min-height: 400px;
+    margin: 0 auto;
+    box-shadow: 12px 16px 8px 4px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    margin-top: 32px;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    animation: up 800ms;
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translate3d(142px, -62px, -135px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0);
+    }
+}
+
+.card .avatar {
+    background: url(https://source.unsplash.com/collection/4852103/1600x900) no-repeat center center / cover;
+}
+
+.details {
+    padding: 32px;
+}
+
+.details .item {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details .item:last-child {
+    border: none;
+}
+
+.details .item div:nth-child(1) {
+    font-size: 14px;
+    color: #777;
+    letter-spacing: 0.7;
+    line-height: 24px;
+    font-weight: normal;
+}
+
+.details .item div:nth-child(2) {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+    color: #555;
+}
+
+.details .item span {
+    background-color: gold;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 6px;
+    margin-right: 8px;
+    padding: 2px 16px;
+}
