@@ -88,6 +88,12 @@ body {
     padding: 32px;
 }
 
+.details h3 {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
 .details .item {
     padding: 12px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
