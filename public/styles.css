@@ -160,7 +160,8 @@ form input[type="radio"] {
     margin-right: 4px;
 }
 
-button[type="submit"] {
+button[type="submit"],
+a.button {
     width: 100%;
     border: none;
     background-color: var(--primary-color);
@@ -170,4 +171,11 @@ button[type="submit"] {
     border-radius: 8px;
     outline: none;
     cursor: pointer;
+}
+
+a.button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
 }
