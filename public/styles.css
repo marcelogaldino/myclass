@@ -89,6 +89,7 @@ header {
 
 .details {
     padding: 32px;
+    position: relative;
 }
 
 .details h3 {
@@ -162,7 +163,7 @@ form input[type="radio"] {
 
 button[type="submit"],
 a.button {
-    width: 100%;
+    width: 40%;
     border: none;
     background-color: var(--primary-color);
     color: white;
@@ -171,6 +172,7 @@ a.button {
     border-radius: 8px;
     outline: none;
     cursor: pointer;
+    margin-top: 9px;
 }
 
 a.button {
@@ -178,4 +180,16 @@ a.button {
     text-align: center;
     text-decoration: none;
     margin-top: 10px;
+}
+
+#form-delete {
+    position: absolute;
+    right: 0;
+    bottom: 31px;
+    left: 266px;
+    width: 430px;
+} 
+
+#form-delete button[type="submit"] {
+    background-color: red;
 }
