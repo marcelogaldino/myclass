@@ -1,64 +1,15 @@
 {
-  "teachers": [
-    {
-      "id": 2,
-      "avatar_url": "http://asd",
-      "name": "Marcelo",
-      "birth": 670636800000,
-      "degree": "Ensino Superior Completo",
-      "modality": "Online",
-      "services": "auhsdiuh, auiwhuwihuiwh, nwrnrknwrkwr",
-      "created_at": 1586137032789
-    },
-    {
-      "id": 3,
-      "avatar_url": "http://asd",
-      "name": "Marcelo",
-      "birth": 670636800000,
-      "degree": "Ensino Superior Completo",
-      "modality": "Online",
-      "services": "auhsdiuh, auiwhuwihuiwh, nwrnrknwrkwr",
-      "created_at": 1586137035527
-    },
-    {
-      "id": 4,
-      "avatar_url": "http://asd",
-      "name": "Marcelo",
-      "birth": 670636800000,
-      "degree": "Ensino Superior Completo",
-      "modality": "Online",
-      "services": "auhsdiuh, auiwhuwihuiwh, nwrnrknwrkwr",
-      "created_at": 1586137038512
-    },
-    {
-      "id": 5,
-      "avatar_url": "http://asd",
-      "name": "Marcelo",
-      "birth": 670636800000,
-      "degree": "Ensino Superior Completo",
-      "modality": "Online",
-      "services": "auhsdiuh, auiwhuwihuiwh, nwrnrknwrkwr",
-      "created_at": 1586137042656
-    },
-    {
-      "id": 6,
-      "avatar_url": "http://asd",
-      "name": "Marcelo",
-      "birth": 670636800000,
-      "degree": "Ensino Superior Completo",
-      "modality": "Online",
-      "services": "auhsdiuh, auiwhuwihuiwh, nwrnrknwrkwr",
-      "created_at": 1586137046454
-    },
-    {
-      "id": 7,
-      "avatar_url": "http://",
-      "name": "Nome Sobrenome",
-      "birth": 318211200000,
-      "degree": "Doutorado",
-      "modality": "Online",
-      "services": "Logica",
-      "created_at": 1586625016989
-    }
-  ]
+    "teachers": [
+        {
+            "id": 1,
+            "avatar_url": "https://unsplash.com/photos/s9CC2SKySJM",
+            "name": "Marcelo Galdino",
+            "birth": 670636800000,
+            "degree": "medio",
+            "classType": "D",
+            "services": "web, mobile",
+            "created_at": 1592778384976,
+            "birt": 670636800000
+        }
+    ]
 }
