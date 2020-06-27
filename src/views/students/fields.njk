@@ -1,0 +1,116 @@
+<div class="item">
+    <div>Imagem</div>
+    <div>
+        <input 
+            type="text"
+            placeholder="http://"
+            name="avatar_url"
+            value="{{ student.avatar_url }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Nome</div>
+    <div>
+        <input 
+            type="text" 
+            name="name"
+            value="{{ student.name }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Idade</div>
+    <div>
+        <input 
+            type="date" 
+            name="birth"
+            value="{{ student.birth }}"
+        >
+    </div>    
+</div>
+
+<div class="item">
+    <div>Email</div>
+    <div>
+        <input 
+            type="email" 
+            name="email"
+            value="{{ student.email }}"
+        >
+    </div>    
+</div>
+
+<div class="item">
+    <div>Ano escolar</div>
+    <div>
+        <select name="degree">
+            <option 
+                value="5fundamental" 
+                {% if student.degree == '5fundamental' %}
+                    selected
+                {% endif %}
+                >5° ano ensino fundamental
+            </option>
+            <option 
+                value="6fundamental"
+                {% if student.degree == '6fundamental' %}
+                    selected
+                {% endif %}
+                >6° ano ensino fundamental
+            </option>
+            <option 
+                value="7fundamental"
+                {% if student.degree == '7fundamental' %}
+                    selected
+                {% endif %}
+                >7° ano ensino fundamental
+            </option>
+            <option 
+                value="8fundamental"
+                {% if student.degree == '8fundamental' %}
+                    selected
+                {% endif %}
+                >8° ano ensino fundamental
+            </option>
+            <option 
+                value="1medio"
+                {% if student.degree == '1medio' %}
+                    selected
+                {% endif %}
+                >1° ano ensino médio
+            </option>
+            <option 
+                value="2medio"
+                {% if student.degree == '2medio' %}
+                    selected
+                {% endif %}
+                >2° ano ensino médio
+            </option>
+            <option 
+                value="3medio"
+                {% if student.degree == '3medio' %}
+                    selected
+                {% endif %}
+                >3° ano ensino médio
+            </option>
+        </select>
+    </div>    
+</div>
+
+
+<div class="item">
+    <div>Carga horária semanal</div>
+    <div>
+        <input 
+            type="number" 
+            name="hours"
+            placeholder="Somente números"
+            value="{{ student.hours }}"
+        >
+    </div>
+</div>
+
+<button id="save-button" type="submit">Salvar</button>

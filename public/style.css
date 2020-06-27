@@ -98,7 +98,7 @@ header {
 
 .card .card-details .item {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 16px 0;
+    padding: 12px 0;
 }
 
 .card .card-details .item:last-child {
@@ -197,7 +197,72 @@ button[type="submit"] {
 .card-details button[type="submit"]:nth-child(2) {
     position: absolute;
     right: 33px;
-    top: 584px;
+    top: 537px;
     width: 40%;
     background: rgba(255, 10, 10, 0.8);
+}
+
+/* TABLE */
+
+.table-container {
+    display: block;
+    box-sizing: border-box;
+    padding: 32px;
+}
+
+.table-container table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.table-container thead tr th,
+.table-container tbody tr td {
+    text-align: center;
+}
+
+th {
+    text-transform: uppercase;
+    color: #777;
+    font-size: 14px;
+}
+
+td, th {
+    padding: 16px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr td:first-child {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+}
+
+tbody tr td:first-child span {
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px;
+    box-shadow: 3px 1px 6px -4px black;
+    border: 2px solid white;
+}
+
+.table-container > a,
+tbody tr td:last-child a {
+    background: var(--primary-color);
+    color: white;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.table-container > a {
+    margin: 8px;
+    display: inline-block;
 }

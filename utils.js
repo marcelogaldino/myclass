@@ -22,7 +22,13 @@ module.exports = {
 
         const day = `0${date.getUTCDay()}`.slice(-2)
 
-        return `${year}-${month}-${day}`
+        return {
+            day,
+            month,
+            year,
+            birthDay: `${day}/${month}`,
+            iso: `${year}-${month}-${day}`
+        }
     },
 
     graduation(degree) {
@@ -39,5 +45,40 @@ module.exports = {
         if(degree === 'doutorado')
             return degree = 'Doutorado'
 
+    },
+
+    studentGrade(degree) {
+        switch (degree) {
+            case '5fundamental':
+                return '5° ano ensino fundamental'
+                break;
+
+            case '6fundamental':
+                return '6° ano ensino fundamental'
+                break;
+
+            case '7fundamental':
+                return '7° ano ensino fundamental'
+                break;
+
+            case '8fundamental':
+                return '8° ano ensino fundamental'
+                break;
+
+            case '1medio':
+                return '1° ano ensino médio'
+                break;
+
+            case '2medio':
+                return '2° ano ensino médio'
+                break;
+
+            case '3medio':
+                return '3° ano ensino médio'
+                break;
+                
+            default:
+                break;
+        }
     }
 }
