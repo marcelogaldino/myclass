@@ -1,7 +1,7 @@
 const express = require('express')
 
-const teachers = require('./src/controllers/teachers')
-const students = require('./src/controllers/students')
+const teachers = require('./src/app/controllers/teachers')
+const students = require('./src/app/controllers/students')
 
 const routes = express.Router()
 
