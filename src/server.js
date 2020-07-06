@@ -13,7 +13,7 @@ server.use(express.static('public'))
 server.use(methodOverride('_method'))
 server.use(routes)
 
-nunjucks.configure('src/views', {
+nunjucks.configure('src/app/views', {
     express: server,
     autoescape: true,
     noCache: true

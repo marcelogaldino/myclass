@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm-run-all -p nodemon browsersync ",
-    "browsersync": "browser-sync start --proxy http://localhost:3335 --files 'public, src' ",
-    "nodemon": "nodemon server.js"
+    "browsersync": "browser-sync start --proxy http://localhost:3335 --files 'public, src/app/views' ",
+    "nodemon": "nodemon src/server.js"
   },
   "author": "Marcelo Galdino",
   "license": "MIT",
@@ -20,7 +20,8 @@
     "express": "^4.17.1",
     "intl": "^1.2.5",
     "method-override": "^3.0.0",
-    "nunjucks": "^3.2.1"
+    "nunjucks": "^3.2.1",
+    "pg": "^8.2.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.0.1",
