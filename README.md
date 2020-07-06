@@ -4,7 +4,7 @@ A website for private classes. Perfect for teachers who love teaching and for st
 <h1 align="center">
     <img alt="homepage myclass" title="#MY CLASS" src="./public/assets/teachers.png" width="500px" />
 </h1>
- 
+
 </h4>
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/marcelogaldino/myclass?color=%2304D361">
