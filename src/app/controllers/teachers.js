@@ -2,7 +2,7 @@ const {age, date, graduation} = require('../../lib/utils')
 
 module.exports = {
     index(req, res) {
-        return res.render('teachers/index', { teachers: data.teachers })
+        return res.render('teachers/index')
     },
 
     create(req, res) {
