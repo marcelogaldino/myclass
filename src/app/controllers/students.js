@@ -1,12 +1,16 @@
-const {age, date, graduation} = require('../../lib/utils')
+const {date, studentGrade} = require('../../lib/utils')
+
+const Student = require('../models/Student')
 
 module.exports = {
     index(req, res) {
-        return res.render('students/index')
+        Student.all(students => {
+            return res.render('students/index', { students })
+        })
     },
 
     create(req, res) {
-        return
+        return res.render('students/create')
     },
 
     post(req, res) {
@@ -17,24 +21,38 @@ module.exports = {
                 return res.send('Please fill all the fields')
         }
 
-        let { avatar_url, name, birth, degree, classType, services } = req.body
+        Student.create(req.body, student => {
+            return res.redirect(`students/${student.id}`)
+        })
 
-        return
     },
 
     show(req, res) {
-        return
+        Student.find(req.params.id, student => {
+
+            student.birth = date(student.birth).birthDay
+            student.degree = studentGrade(student.degree)
+            
+            return res.render('students/show', { student })
+        })
     },
 
     edit(req, res) {
-        return
+        Student.find(req.params.id, student => {
+
+            student.birth = date(student.birth).birthDay
+            
+            return res.render('students/edit', { student })
+        })
     },
 
     update(req, res) {
-        return
+        return res.redirect(`student/${req.body.id}`)
     },
 
     delete(req, res) {
-        return
+        Student.delete(req.body.id, () => {
+            return res.redirect('students')
+        })
     }
 }
