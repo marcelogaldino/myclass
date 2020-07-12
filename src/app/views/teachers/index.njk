@@ -8,7 +8,7 @@
     <div class="card table-container">
 
         <div class="header">
-            <a class="button" href="teachers/create">Novo</a>
+            <a id="btn" class="button" href="teachers/create">Novo</a>
             <form action="/teachers" method="GET">
                 <input 
                     type="text" 
@@ -16,7 +16,7 @@
                     placeholder="Nome ou Atendimento"
                     value={{filter}}
                 >
-                <button type="submit">Filtrar</button>
+                <button id="btn" type="submit">Filtrar</button>
             </form>
         </div>
 
@@ -36,12 +36,19 @@
                         <span style="background-image: url('{{ teacher.avatar_url }}')"></span>
                         {{ teacher.name }}
                     </td>
-                    <td>{{ teacher.services }}</td>
+                    <td>{{ teacher.subjects_taught }}</td>
                     <td>{{ teacher.total_students }}</td>
                     <td><a href="teachers/{{ teacher.id }}">ver</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
+
+        <div class="pagination"
+            data-page={{pagination.page}}
+            data-total={{pagination.total}}
+            data-filter={{filter}}
+        ></div>
+
     </div>
 {% endblock content %}

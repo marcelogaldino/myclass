@@ -2,12 +2,17 @@
 A website for private classes. Perfect for teachers who love teaching and for students who love learning | Reach your goals faster with **MY CLASS**
 
 <h1 align="center">
-    <img alt="homepage myclass" title="#MY CLASS" src="./public/assets/teachers.png" width="500px" />
+    <img alt="homepage myclass" title="#MY CLASS" src="./public/assets/teachers1.png" width="800px" />
+</h1>
+
+<h1 align="center">
+    <img alt="homepage myclass" title="#MY CLASS" src="./public/assets/students.png" width="800px" />
 </h1>
 
 </h4>
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/marcelogaldino/myclass?color=%2304D361">
+  
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/marcelogaldino/myclass">
 	
