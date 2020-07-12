@@ -4,13 +4,23 @@ const Student = require('../models/Student')
 
 module.exports = {
     index(req, res) {
-        Student.all(students => {
-            return res.render('students/index', { students })
+        Student.all(allStudents => {
+            allStudents.map(students => {
+                students.degree = studentGrade(students.degree)
+            })
+            
+            const myStudents = [
+                ...allStudents,
+            ]
+            
+            return res.render('students/index', { students: myStudents })
         })
     },
 
     create(req, res) {
-        return res.render('students/create')
+        Student.selectOptions(options => {
+            return res.render('students/create', { options })
+        })
     },
 
     post(req, res) {
@@ -41,13 +51,25 @@ module.exports = {
         Student.find(req.params.id, student => {
 
             student.birth = date(student.birth).birthDay
-            
-            return res.render('students/edit', { student })
+
+            Student.selectOptions(options => {
+                return res.render('students/edit', { student, options })
+            })
         })
     },
 
     update(req, res) {
-        return res.redirect(`student/${req.body.id}`)
+        const keys = Object.keys(req.body)
+        
+        for (const key of keys) {
+            if (req.body[key] == "") {
+                return res.send("Please, fill all the fields!!")
+            }
+        }
+
+        Student.update(req.body, () => {
+            return res.redirect(`students/${req.body.id}`)
+        })
     },
 
     delete(req, res) {
